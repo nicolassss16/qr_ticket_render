@@ -1,0 +1,10 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Ticket Verificado</title></head>
+<body><h1>✅ Ticket verificado correctamente</h1>
+<p><strong>Nombre:</strong> {{ ticket.f_name }} {{ ticket.l_name }}</p>
+<p><strong>Ticket ID:</strong> {{ ticket.ticket_id }}</p>
+<p><strong>Fecha de nacimiento:</strong> {{ ticket.dob.strftime('%Y-%m-%d') }}</p>
+<p><strong>Teléfono:</strong> {{ ticket.phone_number }}</p>
+</body></html>
