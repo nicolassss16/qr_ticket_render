@@ -1,0 +1,12 @@
+click
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+Flask-SQLAlchemy
+SQLAlchemy
+qrcode
+reportlab
+Pillow
+gunicorn
