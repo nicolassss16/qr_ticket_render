@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Ticketing System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        @media only screen and (max-width: 600px) {
+            form {
+                max-width: 100%;
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>QR Ticketing System</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </nav>
+    <form action="/" method="post" name="main_form">
+        <label for="f_name">First Name</label>
+        <input type="text" id="f_name" name="f_name" required>
+        
+        <label for="l_name">Last Name</label>
+        <input type="text" id="l_name" name="l_name" required>
+        
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+        
+        <label for="phone_number">Phone Number</label>
+        <input type="tel" id="phone_number" name="phone_number" required>
+        
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+        <button type="submit">Submit</button>
+    </form>
+    <footer>
+        <p>Made by Sarthak Lamba</p>
+        <a href="https://www.linkedin.com/in/sarthaklambaa/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/sarthaklambaa" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:samlamba29@gmail.com"><i class="far fa-envelope"></i></a>
+    </footer>
+</body>
+</html>
